@@ -1,0 +1,29 @@
+{
+  "name": "eslint-foo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint:debug": "cross-env debug=eslint:*,eslint-* eslint src/index.ts",
+    "lint": "eslint src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/express": "^4.16.1",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
+    "babel-eslint": "^10.0.1",
+    "chalk": "^2.4.2",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "eslint-import-resolver-typescript": "^1.1.1",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.17.2",
+    "typescript": "^3.4.5"
+  }
+}
