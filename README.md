@@ -6,8 +6,6 @@ Importing anything else works fine but as soon as I want to `import { Type } fro
 
 ## Reproduce
 
-- clone this repo
-- run `npm install`
-- run `npm run lint` (or `npm run lint:debug` for more info)
-
-The error is thrown in `eslint-import-resolver-node\index.js:18` but why is it used at all? Shouldn't `eslint-import-resolver-typescript` be used here?
+-   clone this repo
+-   run `npm install`
+-   run `npm run lint` (or `npm run lint:debug` for more info)

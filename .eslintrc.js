@@ -1,35 +1,20 @@
-const path = require('path');
 module.exports = {
-    parser: 'babel-eslint',
+    parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 2018,
         sourceType: 'module',
     },
+    extends: ['plugin:import/errors', 'plugin:import/warnings'],
     settings: {
+        'import/parsers': {
+            '@typescript-eslint/parser': ['.ts', '.tsx'],
+        },
         'import/resolver': {
             typescript: {},
         },
-        'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
-        'import/parsers': {
-            '@typescript-eslint/parser': ['.ts', '.tsx'],
-        }
     },
-    extends: [
-        'plugin:import/errors',
-        'plugin:import/warnings',
-        'plugin:import/typescript',
-    ],
-    plugins: ['babel', 'import'],
+    plugins: ['import', '@typescript-eslint/eslint-plugin'],
     rules: {
         'import/no-unresolved': 2,
-    },
-    overrides: {
-        files: ['.ts', '.tsx'],
-        parser: '@typescript-eslint/parser',
-        parserOptions: {
-            ecmaVersion: 2018,
-            sourceType: 'module',
-        },
-        plugins: ['@typescript-eslint/eslint-plugin'],
     },
 };
