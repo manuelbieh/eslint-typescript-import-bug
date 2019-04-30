@@ -8,10 +8,6 @@ module.exports = {
     settings: {
         'import/resolver': {
             typescript: {},
-            node: {
-                extensions: ['.ts', '.d.ts'],
-                paths: ['./src', path.resolve('node_modules'), path.resolve('node_modules/@types')]
-            }
         },
         'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
         'import/parsers': {
@@ -26,15 +22,6 @@ module.exports = {
     plugins: ['babel', 'import'],
     rules: {
         'import/no-unresolved': 2,
-    },
-    settings: {
-        'import/resolver': {
-            typescript: {},
-        },
-        'import/extensions': ['.ts', '.tsx'],
-        'import/parsers': {
-            '@typescript-eslint/parser': ['.ts', '.tsx'],
-        },
     },
     overrides: {
         files: ['.ts', '.tsx'],
